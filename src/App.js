@@ -1,19 +1,52 @@
-import React from "react";
-import logo from './assets/logoName.png';
+import React, { useState } from "react";
+import axios from 'axios'
+import logo from "./assets/logoName.png";
 import "./App.css";
 
 function App() {
-  
+	const [topForm, setTopForm] = useState({ email: "" });
+	const [bottomForm, setBottomForm] = useState({ email: "" });
+
+	const res = document.getElementById("res");
+
+	const sendEmail = email => {
+		axios
+			.post("#", email)
+			.then(res => {
+				console.log(res.data);
+				res.textContent = "✔️";
+			})
+			.catch(err => {
+				console.log(err.message);
+				res.textContent = "Unable to process at this time";
+			});
+	};
+
+	const onTopChange = e => {
+		setTopForm({
+			email: e.target.value
+		});
+	};
+	const onBottomChange = e => {
+		setBottomForm({
+			email: e.target.value
+		});
+	};
+
+	const onTopSubmit = e => {
+		e.preventDefault();
+		sendEmail(topForm);
+	};
+	const onBottomSubmit = e => {
+		e.preventDefault();
+		sendEmail(bottomForm);
+	};
+
 	return (
 		<div className='container'>
 			<header>
-				<img
-					className='header-logo'
-					src={logo}
-					alt='mosaic logo'
-				/>
+				<img className='header-logo' src={logo} alt='mosaic logo' />
 			</header>
-
 			<main>
 				<section className='top-pitch-container'>
 					<div className='top-pitch'>
@@ -30,13 +63,13 @@ function App() {
 								to make your experience with analysis quick and effortless.
 								Request Beta Access:
 							</h2>
-							<form id='top-form' onSubmit='return topSubmit(event)'>
+							<form onSubmit={onTopSubmit}>
 								<input
-									id='top-input'
 									className='email'
 									type='email'
 									placeholder='Email Address'
 									required
+									onChange={onTopChange}
 								/>
 								<button className='cta-btn' type='submit'>
 									Sign Up
@@ -107,19 +140,19 @@ function App() {
 				<section className='final-cta-container'>
 					<div className='final-cta'>
 						<h2>Interested? Become a Beta User</h2>
-						<form id='bottom-form'>
+						<form onSubmit={onBottomSubmit}>
 							<input
-								id='buttom-input'
 								className='email'
 								type='email'
 								placeholder='Email Address'
+								onChange={onBottomChange}
 								required
 							/>
 							<button className='final-cta-btn' type='submit'>
 								Sign Up
 							</button>
 						</form>
-						<p id='res-bottom'></p>
+						<p id='res'></p>
 					</div>
 				</section>
 
