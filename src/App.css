@@ -279,6 +279,8 @@ html body {
   font-family: "Inter", sans-serif;
   color: #1b1725;
 }
+
+
 html body header {
   background-color: #f9fbf2;
   margin: 1.667rem auto;
@@ -331,3 +333,5 @@ html body footer {
 html body footer div {
   margin: 1rem;
 }
+
+

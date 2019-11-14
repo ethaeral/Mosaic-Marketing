@@ -14,11 +14,14 @@ function App() {
 			.post("#", email)
 			.then(res => {
 				console.log(res.data);
+				res.setAttribute('style', 'color: green;')
 				res.textContent = "✔️";
 			})
 			.catch(err => {
 				console.log(err.message);
+				res.setAttribute('style', 'color: red;')
 				res.textContent = "Unable to process at this time";
+		
 			});
 	};
 
