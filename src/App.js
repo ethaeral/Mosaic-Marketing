@@ -10,7 +10,7 @@ function App() {
 
 	const sendEmail = email => {
 		axios
-			.post("http://localhost:5000/api/emails", email)
+			.post("https://getmosaicapp.herokuapp.com/api/emails", email)
 			.then(res => {
 				console.log(res.data);
 				setError(false);
