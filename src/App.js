@@ -22,18 +22,20 @@ function App() {
 	};
 
 	const onTopChange = e => {
+
 		setTopForm({
-			email: e.target.value
+			email: e.target.value.toLowerCase()
 		});
 	};
 	const onBottomChange = e => {
 		setBottomForm({
-			email: e.target.value
+			email: e.target.value.toLowerCase()
 		});
 	};
 
 	const onTopSubmit = e => {
 		e.preventDefault();
+
 		sendEmail(topForm);
 	};
 	const onBottomSubmit = e => {
