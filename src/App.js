@@ -1,27 +1,23 @@
 import React, { useState } from "react";
-import axios from 'axios'
+import axios from "axios";
 import logo from "./assets/logoName.png";
 import "./App.css";
 
 function App() {
 	const [topForm, setTopForm] = useState({ email: "" });
 	const [bottomForm, setBottomForm] = useState({ email: "" });
-
-	const res = document.getElementById("res");
+	const [error, setError] = useState(null);
 
 	const sendEmail = email => {
 		axios
-			.post("#", email)
+			.post("http://localhost:5000/api/emails", email)
 			.then(res => {
 				console.log(res.data);
-				res.setAttribute('style', 'color: green;')
-				res.textContent = "✔️";
+				setError(false);
 			})
 			.catch(err => {
 				console.log(err.message);
-				res.setAttribute('style', 'color: red;')
-				res.textContent = "Unable to process at this time";
-		
+				setError(true);
 			});
 	};
 
@@ -78,7 +74,11 @@ function App() {
 									Sign Up
 								</button>
 							</form>
-							<p id='res'></p>
+							{error === null ? null : error === false ? (
+								<p className='success'>Email successfully added</p>
+							) : (
+								<p className='error'>Unable to process</p>
+							)}
 						</div>
 					</div>
 				</section>
@@ -96,7 +96,7 @@ function App() {
 							<div className='feature-description'>
 								<h4>Flexible workspaces</h4>
 								<p>
-									Cutomize and organize your workspace the way it makes sense
+									Customize and organize your workspace the way it makes sense
 								</p>
 							</div>
 							<div className='feature-description'>
@@ -143,6 +143,7 @@ function App() {
 				<section className='final-cta-container'>
 					<div className='final-cta'>
 						<h2>Interested? Become a Beta User</h2>
+
 						<form onSubmit={onBottomSubmit}>
 							<input
 								className='email'
@@ -155,7 +156,11 @@ function App() {
 								Sign Up
 							</button>
 						</form>
-						<p id='res'></p>
+						{error === null ? null : error === false ? (
+							<p className='success'>Email successfully added</p>
+						) : (
+							<p className='error'>Unable to process</p>
+						)}
 					</div>
 				</section>
 
