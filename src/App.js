@@ -22,7 +22,6 @@ function App() {
 	};
 
 	const onTopChange = e => {
-
 		setTopForm({
 			email: e.target.value.toLowerCase()
 		});
@@ -59,10 +58,11 @@ function App() {
 						</div>
 						<div className='cta'>
 							<h2>
-								Mosaic will help guide your team to pick the best algorithms and
-								naviagte how to interpret it's generated graphics. The goal is
-								to make your experience with analysis quick and effortless.
-								Request Beta Access:
+								Mosaic is a tool to help teams build a visual data story through
+								step by step guidance on how to get from a database to a tested
+								conclusion theory.The goal is to make your experience with
+								analysis quick and effortless. Request beta
+								access:
 							</h2>
 							<form onSubmit={onTopSubmit}>
 								<input
@@ -86,9 +86,9 @@ function App() {
 				</section>
 
 				<section className='hook'>
-					<h2>It's business intelligence - made easy.</h2>
+					<h2>Got big data? Demystify it.</h2>
 					<h3>
-						Parse, interpret and communicate your findings in a beautiful way.
+						Clean, parse, interpret, and communicate your findings in a beautiful way.
 					</h3>
 				</section>
 
@@ -120,7 +120,7 @@ function App() {
 							<div className='feature-description'>
 								<h4>Guided insights</h4>
 								<p>
-									Have your own mini data scientist that doesn't sleep or need
+									Have your own mini junior data scientist that doesn't sleep or need
 									vacations - but please be nice to it
 								</p>
 							</div>
@@ -134,8 +134,7 @@ function App() {
 							<div className='feature-description'>
 								<h4>Use Mosaic's database</h4>
 								<p>
-									We've webscraped public use data for you to use and play
-									around with
+									We've webscraped public use data for you to compare your data with and or analyze the overall market
 								</p>
 							</div>
 						</div>
