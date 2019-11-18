@@ -134,7 +134,7 @@ function App() {
 							<div className='feature-description'>
 								<h4>Use Mosaic's database</h4>
 								<p>
-									We've webscraped public use data for you to compare your data with and or analyze the overall market
+									We've webscraped public-use data for you to compare your data with and or analyze the overall market
 								</p>
 							</div>
 						</div>
