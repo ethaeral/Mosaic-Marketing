@@ -104,7 +104,7 @@ function App() {
 							<div className='feature-description'>
 								<h4>Outcome analysis guidance</h4>
 								<p>
-								Mosaic will help identify biases by asking series of questions about your data
+								Get step by step guidance in anaylsis by prompt of thorough questions about the data
 								</p>
 							</div>
 							<div className='feature-description'>
@@ -117,10 +117,9 @@ function App() {
 						</div>
 						<div className='three-container'>
 							<div className='feature-description'>
-								<h4>Guided insights</h4>
+								<h4>Automation</h4>
 								<p>
-									Have your own mini junior data scientist that doesn't sleep or
-									need vacations - but please be nice to it
+									Set an upstream of your data to run instant analysis after you make your model
 								</p>
 							</div>
 							<div className='feature-description'>
