@@ -58,8 +58,11 @@ function App() {
 						</div>
 						<div className='cta'>
 							<h2>
-							The goal is to lower the threshold to analyzing and understanding data. Mosaic graphic interface is being designed to help guide teams step by step to clean, massage data, make a model, and help users understand its outputs by informing them the different benefits of each choice. Run custom code analysis without touching code. Create interactive graphics and static for presentations. Even use Mosaic’s growing market data set - where users can compare their business to their market globally or locally. Request beta
-								access:
+								Mosaic is designed to help guide teams step by step to clean,
+								massage data, make a model, and help users understand its
+								outputs by informing them the reason behind each option.			
+								Run custom code analysis without touching a line of code.
+								<br /> Request beta access:
 							</h2>
 							<form onSubmit={onTopSubmit}>
 								<input
@@ -85,7 +88,8 @@ function App() {
 				<section className='hook'>
 					<h2>Got big data? Demystify it.</h2>
 					<h3>
-						Clean, parse, interpret, and communicate your findings in a beautiful way.
+						Clean, parse, interpret, and communicate your findings in a
+						beautiful way.
 					</h3>
 				</section>
 
@@ -117,8 +121,8 @@ function App() {
 							<div className='feature-description'>
 								<h4>Guided insights</h4>
 								<p>
-									Have your own mini junior data scientist that doesn't sleep or need
-									vacations - but please be nice to it
+									Have your own mini junior data scientist that doesn't sleep or
+									need vacations - but please be nice to it
 								</p>
 							</div>
 							<div className='feature-description'>
@@ -131,7 +135,8 @@ function App() {
 							<div className='feature-description'>
 								<h4>Use Mosaic's database</h4>
 								<p>
-									We've webscraped public-use data for you to compare your data with and or analyze the overall market
+									We've webscraped public-use data for you to compare your data
+									with and or analyze the overall market
 								</p>
 							</div>
 						</div>
