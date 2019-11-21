@@ -58,7 +58,7 @@ function App() {
 						</div>
 						<div className='cta'>
 							<h2>
-							The goal is to lower the threshold to analyzing and understanding data. Mosaic graphic interface is being designed to help guide teams step by step to clean, massage data, make a model, and help users understand its outputs by informing them the different benefits of each choice. Run custom code analysis without touching code with the software interface. Create interactive graphics and static for presentations. Even use Mosaic’s growing market data set - where users can compare their business to their market globally or locally. Request beta
+							The goal is to lower the threshold to analyzing and understanding data. Mosaic graphic interface is being designed to help guide teams step by step to clean, massage data, make a model, and help users understand its outputs by informing them the different benefits of each choice. Run custom code analysis without touching code. Create interactive graphics and static for presentations. Even use Mosaic’s growing market data set - where users can compare their business to their market globally or locally. Request beta
 								access:
 							</h2>
 							<form onSubmit={onTopSubmit}>
