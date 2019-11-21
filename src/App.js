@@ -59,8 +59,7 @@ function App() {
 						<div className='cta'>
 							<h2>
 								Mosaic is designed to help guide teams step by step to clean,
-								massage data, make a model, and help users understand its
-								outputs by informing them the reason behind each option.			
+								massage data, make a model and informing the reason behind each option. 			
 								Run custom code analysis without touching a line of code.
 								<br /> Request beta access:
 							</h2>
@@ -103,10 +102,9 @@ function App() {
 								</p>
 							</div>
 							<div className='feature-description'>
-								<h4>Manage your research</h4>
+								<h4>Outcome analysis guidance</h4>
 								<p>
-									Sort your workspace, favorite them, and group them based on
-									projects
+								Mosaic will help identify biases by asking series of questions about your data
 								</p>
 							</div>
 							<div className='feature-description'>
